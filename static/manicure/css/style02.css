@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+*{
+    margin: 0px;
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #F2E9EB;
+}
+
+header{
+    background-color: #F23064;
+    height: 165px;
+}
+
+header > div >  img{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+#img_container{
+    text-align: center;
+}
+
+h1{
+    color: #F23064;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 10px;
+}
+
+#formulario{
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+#formulario > form{
+    position: relative;
+    display: inline-block;
+}
+
+form > input{
+    width: 400px;
+    height: 40px;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    padding-left: 10px;
+    outline: 0;
+    display: block;
+}
+
+label{
+    font-size: 70px;
+    opacity: 0.7;
+
+}
+
+.botao{
+    width: 130px;
+    height: 36px;
+    font-size: 20px;
+    background-color: #F23064;
+    color: #D9D9D9;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+form :hover{
+    background-color: #F2E9EB;
+    transition: 1s;
+    transform: scale(1.1);
+    color: #F23064;
+    border: #F23064 1px solid;
+}

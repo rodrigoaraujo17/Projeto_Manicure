@@ -1,0 +1,21 @@
+{% extends 'users/layouts/base.html' %}
+
+{% load widget_tweaks %}
+
+{% load static %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<h1>Crie sua conta!</h1>
+<div id="formulario">
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+        {% render_field field placeholder=field.label %}
+        {% endfor %}
+        <input type="button" value="Voltar" class="botao">
+        <input type="submit" name="enviar" value="Concluir" class="botao">
+    </form>
+</div>
+{% endblock %}

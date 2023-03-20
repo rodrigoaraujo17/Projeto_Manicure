@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título Genérico{% endblock %}</title>
+    {% block link %}<link rel="stylesheet" href="{% static 'users/css/style02.css' %}">{% endblock %}
+</head>
+<body>
+    <header>
+        <div id="img_container">
+            <img src="{% static 'users/img/woman.png' %}" alt="usuario">
+        </div>
+    </header>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+</html>

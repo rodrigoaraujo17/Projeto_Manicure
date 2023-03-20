@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título Genérico{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'manicure/css/style02.css' %}">
+</head>
+<body>
+    <header>
+        <div id="img_container">
+            <img src="{% static 'manicure/img/woman.png' %}" alt="usuario">
+        </div>
+        {% if user.is_authenticated %}
+        <h3>Olá, {{ user.get_full_name }}</h3>
+        <button type="button"><a href="{% url 'users:logout' %}">Logout</a></button>
+        {% else %}
+        <h2>Não autenticado</h2>
+        <button type="button"><a href="{% url 'users:signup' %}">Cadastrar</a></button>
+        <button type="button"><a href="{% url 'users:login' %}">Log in</a></button>
+        {% endif %}
+    </header>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+</html>

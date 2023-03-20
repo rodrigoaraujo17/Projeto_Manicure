@@ -1,0 +1,27 @@
+{% extends 'users/layouts/base.html' %}
+
+{% load widget_tweaks %}
+
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div>
+    <div id="login">
+        <form method="POST" class="card">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="card-content-area">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {% render_field field placeholder=field.label %}
+            </div>
+            {% endfor %}
+            <div class="card-footer">
+                <button type="submit">Log In</button>
+                <a class="recuperar_senha">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

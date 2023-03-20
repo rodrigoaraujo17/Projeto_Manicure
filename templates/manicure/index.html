@@ -1,0 +1,12 @@
+{% extends 'manicure/layouts/base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+<h1>Página Inicial</h1>
+{% for perm in user.get_all_permissions %}
+<p>{{ perm }}</p>
+{% endfor %}
+{% endblock %}
