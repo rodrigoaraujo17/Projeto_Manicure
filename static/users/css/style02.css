@@ -42,7 +42,7 @@ h1{
     display: inline-block;
 }
 
-form > input{
+form > input {
     width: 400px;
     height: 40px;
     background: #D9D9D9;
@@ -62,6 +62,18 @@ label{
 }
 
 .botao{
+    width: 130px;
+    height: 36px;
+    font-size: 20px;
+    background-color: #F23064;
+    border-radius: 20px;
+    color: #D9D9D9;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+a > input {
     width: 130px;
     height: 36px;
     font-size: 20px;

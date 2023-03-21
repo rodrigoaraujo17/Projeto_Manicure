@@ -16,11 +16,11 @@
         </div>
         {% if user.is_authenticated %}
         <h3>Olá, {{ user.get_full_name }}</h3>
-        <button type="button"><a href="{% url 'users:logout' %}">Logout</a></button>
+        <button type="button" class="botao"><a href="{% url 'users:logout' %}">Logout</a></button>
         {% else %}
         <h2>Não autenticado</h2>
-        <button type="button"><a href="{% url 'users:signup' %}">Cadastrar</a></button>
-        <button type="button"><a href="{% url 'users:login' %}">Log in</a></button>
+        <button type="button" class="botao"><a href="{% url 'users:signup' %}">Cadastrar</a></button>
+        <button type="button" class="botao"><a href="{% url 'users:login' %}">Log in</a></button>
         {% endif %}
     </header>
     <main>

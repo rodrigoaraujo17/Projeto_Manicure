@@ -2,8 +2,6 @@
 
 {% load widget_tweaks %}
 
-{% load static %}
-
 {% block title %}Cadastro{% endblock %}
 
 {% block content %}
@@ -14,8 +12,9 @@
         {% for field in form.visible_fields %}
         {% render_field field placeholder=field.label %}
         {% endfor %}
-        <input type="button" value="Voltar" class="botao">
+        <input type="submit" value="Voltar" class="botao">
         <input type="submit" name="enviar" value="Concluir" class="botao">
+        <button class="botao">Voltar</button>
     </form>
 </div>
 {% endblock %}
